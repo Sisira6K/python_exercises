@@ -25,11 +25,13 @@ emojis= {
 newsentence =""
 sentence=input("Please enter a sentence: ")
 words = sentence.split()
+
 print(words)
 for i in words :
-    if i in emojis:
-        newsentence= newsentence +" "+emojis[i]       
+    i="".join(i for i in i if i.isalnum())
+    j=i.lower()
+    if j in emojis:   
+        newsentence= newsentence +" "+emojis[j]      
     else :       
         newsentence=newsentence+" "+i
 print(newsentence)
-    
